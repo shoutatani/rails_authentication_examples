@@ -1,0 +1,14 @@
+<header class='header'>
+  <div class="logo-area">
+    <p><%= link_to "RailsApp", root_path %></p>
+  </div>
+  <div class="menu-area">
+    <% if user_signed_in? %>
+      <p class='item'><%= link_to "設定変更", edit_user_path(current_user) %></p>
+      <p class='item'><%= link_to "ログアウト", user_login_logout_path %></p>
+    <% else %>
+      <p class='item'><%= link_to "ログイン", user_login_login_path %></p>
+      <p class='item'><%= link_to "ユーザー登録", new_user_path %></p>
+    <% end %>
+  </div>
+</header>

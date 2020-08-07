@@ -1,0 +1,9 @@
+<h1>ユーザーログイン画面(UserLogin#login)</h1>
+<%= form_with url: user_login_auth_path do |form| %>
+
+  <p><%= form.label :email, "Eメールアドレス" %>: <%= form.text_field :email %></p>
+  <p><%= form.label :password, "パスワード" %>: <%= form.password_field :password %></p>
+  <p><%= form.label :remember, "ログイン状態を保存する" %>: <%= form.check_box :remember %></p>
+
+  <p><%= form.submit "Submit" %></p>
+<% end%>

@@ -1,0 +1,27 @@
+* {
+  //outline: 1px solid #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px double #000;
+
+  .menu-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+
+
+    .item {
+      padding: 0 10px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

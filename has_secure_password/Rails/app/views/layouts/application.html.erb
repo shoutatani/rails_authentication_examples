@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+
+  <body>
+    <% unless @no_header %>
+      <%= render 'layouts/header' %>
+    <% end %>
+    <%= render 'layouts/flash' %>
+    <%= yield %>
+  </body>
+</html>

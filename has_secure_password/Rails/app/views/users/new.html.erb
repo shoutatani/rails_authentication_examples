@@ -1,0 +1,12 @@
+<h1>ユーザー登録画面(Users#new)</h1>
+<%= render 'shared/model_error', model: @user%>
+<%= form_with model: @user do |form| %>
+
+  <p><%= form.label :first_name, "名" %>: <%= form.text_field :first_name %></p>
+  <p><%= form.label :last_name, "姓" %>: <%= form.text_field :last_name %></p>
+  <p><%= form.label :email, "Eメールアドレス" %>: <%= form.text_field :email %></p>
+  <p><%= form.label :password, "パスワード" %>: <%= form.password_field :password %></p>
+  <p><%= form.label :password_confirmation, "パスワード(確認)" %>: <%= form.password_field :password_confirmation %></p>
+
+  <p><%= form.submit "アカウント作成" %></p>
+<% end%>

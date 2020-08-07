@@ -1,0 +1,12 @@
+<h1>ユーザー情報変更画面(Users#edit)</h1>
+<%= render 'shared/model_error', model: @user%>
+<%= form_with model: @user do |form| %>
+
+  <p>first_name: <%= @user.first_name %></p>
+  <p>last_name: <%= @user.last_name %></p>
+  <p>email: <%= form.text_field :email %></p>
+  <p>password: <%= form.password_field :password %></p>
+  <p>password condirmation: <%= form.password_field :password_confirmation %></p>
+
+  <p><%= form.submit "Submit" %></p>
+<% end%>
